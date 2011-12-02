@@ -1,0 +1,38 @@
+/*
+*= require helperclasses
+*/
+
+.clearfilter {
+  background: url("http://png.findicons.com/files/icons/1715/gion/16/dialog_close.png") no-repeat scroll right center white;
+  display: inline-block;
+  height: 16px;
+  opacity: 0.2;
+  position: absolute;
+  right: 4%;
+  top: 6px;
+  width: 16px;
+}
+
+.clearfilter:hover {
+  opacity: 0.5;
+}
+
+
+.filteringmsg {
+  background-color: #FFF96F;
+  text-align: center;
+  line-height: 9px;
+}
+.filteringmsg td {
+  text-align: center;
+}
+
+.filteringbar {
+  background-color: #eee ;
+  select, input {
+    width: 95%;
+  }
+}
+.filterwrapper {
+  position: relative;
+}
