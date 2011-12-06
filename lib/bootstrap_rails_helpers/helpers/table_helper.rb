@@ -38,6 +38,10 @@ module BootstrapRailsHelpers
         end
       end
 
+      def init_list opts = {}
+        render 'bootstrap_common/init_list', opts
+      end
+
     end
   end
 end

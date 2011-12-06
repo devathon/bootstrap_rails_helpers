@@ -1,0 +1,18 @@
+- content_for :javascripts do
+  javascript:
+    $( function(){
+      show_error = function(xhr, stats, error){
+        flash_text("Failed to load #{list}");
+        $("##{list} .loading").hide();
+      }
+      if( $("##{list} .loading img:visible").size() > 0 ){
+        $.ajax( '#{raw path}', {dataType:'script', error:show_error } );
+      }
+    } );
+    $("##{list}_list .filterwrapper input").live( 'keyup', function(){
+      filter = {};
+      $("##{list}_list .filterwrapper input").each( function(i){ filter[this.name] = this.value } );
+        $("##{list}_list .loading img").show();
+        $.ajax( '#{raw path}', {dataType:'script', data:filter, error:show_error});
+    } );
+
