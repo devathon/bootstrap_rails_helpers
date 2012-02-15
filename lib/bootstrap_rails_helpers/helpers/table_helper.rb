@@ -22,7 +22,7 @@ module BootstrapRailsHelpers
       def table_row opts = {}, &block
         opts[:class] ||= ''
         opts[:class] += ' filteringbar' if opts[:filter]
-        content_tag( :tr, :class => opts[:class] ){ yield }
+        content_tag( :tr, :class => opts[:class], :id => opts[:id] ){ yield }
       end
 
       def table_col opts = {}, &block
