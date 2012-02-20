@@ -4,7 +4,7 @@ require "bootstrap_rails_helpers/version"
 
 Gem::Specification.new do |s|
   s.name        = "bootstrap_rails_helpers"
-  s.version     = BootstrapRailsHelpers::VERSION
+  s.version     = BootstrapRailsHelpers::VERSION 
   s.authors     = ["Sunil Mohan Ranta"]
   s.email       = ["smr@crypsis.net"]
   s.homepage    = "http://github.com/crypsis/bootstrap_rails_helpers"
