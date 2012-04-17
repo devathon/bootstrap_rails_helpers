@@ -4,7 +4,8 @@
 */
 
 .clearfilter {
-  background: url("http://png.findicons.com/files/icons/1715/gion/16/dialog_close.png") no-repeat scroll right center white;
+  /* Image is from http://png.findicons.com/files/icons/1715/gion/16/dialog_close.png . Copyrights owned by respective owners */
+  background: url( <%= asset_path 'dialog_close.png' %>) no-repeat scroll right center white;
   display: inline-block;
   height: 16px;
   opacity: 0.2;
