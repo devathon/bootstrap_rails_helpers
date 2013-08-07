@@ -3,18 +3,18 @@ module BootstrapRailsHelpers
     module ModalHelper
 
       def modal_link opts
-        link_to opts[:name], opts[:url], :class => 'btn fr mtm info', :remote => opts[:remote]
+        link_to opts[:name], opts[:url], :class => "btn #{opts[:class]}", :role => 'button', :data => { 'toggle' => 'modal', 'target' => opts[:target], 'remote' => opts[:remote] }
       end
 
       def modal_button opts
-        content_tag( :div, opts[:button], :class => 'btn fr mtm info', :data => { 'controls-modal' => opts[:id] } )
+        content_tag( :div, opts[:button], :class => "btn #{opts[:class]}", :data => { 'controls-modal' => opts[:id] } )
       end
 
       def modal opts, &block
         (opts[:button].present? ? modal_button(opts) : '') +
           content_tag( :div, :class => 'hide modal', :id => opts[:id] ) do
           content_tag( :div, :class => 'modal-header' ) do
-            content_tag( :a, 'x', :class => 'close', :href => '#' ) +
+            content_tag( :a, 'x', :class => 'close', :data => { 'dismiss' => 'modal' }  :href => '#' ) +
               content_tag( :h3, opts[:title] )
           end + content_tag( :div ){ yield }
           end
