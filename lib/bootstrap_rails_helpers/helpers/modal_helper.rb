@@ -14,7 +14,7 @@ module BootstrapRailsHelpers
         (opts[:button].present? ? modal_button(opts) : '') +
           content_tag( :div, :class => 'hide modal', :id => opts[:id] ) do
           content_tag( :div, :class => 'modal-header' ) do
-            content_tag( :a, 'x', :class => 'close', :data => { 'dismiss' => 'modal' }  :href => '#' ) +
+            content_tag( :a, 'x', :class => 'close', :data => { 'dismiss' => 'modal' }, :href => '#' ) +
               content_tag( :h3, opts[:title] )
           end + content_tag( :div ){ yield }
           end
